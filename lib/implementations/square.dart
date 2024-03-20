@@ -1,4 +1,4 @@
-import 'package:interfacing/interfacing.dart';
+part of interfacing;
 
 class Square extends Rectangle {
   double side;

@@ -1,4 +1,3 @@
-import 'package:interfacing/implementations/square.dart';
 import 'package:interfacing/interfacing.dart';
 
 void main(List<String> arguments) {
