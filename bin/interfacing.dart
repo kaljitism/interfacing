@@ -28,7 +28,7 @@ void main(List<String> arguments) {
   int shapeValue = DeveloperUtils.choiceGenerator();
   double randomLength = DeveloperUtils.randomLength.toDouble();
   double randomWidth = DeveloperUtils.randomLength.toDouble();
-  Shape shape;
+  Shape? shape;
 
   switch (shapeValue) {
     case 0:
@@ -41,11 +41,11 @@ void main(List<String> arguments) {
       shape = Square(side: randomLength);
       break;
     default:
-      shape = Circle(radius: randomLength);
+      print("Invalid shape");
       break;
   }
 
-  print("The name of the random shape is ${shape.name}");
-  print("The area of the random shape is ${shape.area}");
-  print("The perimeter of the random shape is ${shape.perimeter} ");
+  print("The name of the random shape is ${shape?.name}");
+  print("The area of the random shape is ${shape?.area}");
+  print("The perimeter of the random shape is ${shape?.perimeter} ");
 }
