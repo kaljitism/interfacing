@@ -6,11 +6,11 @@ class Circle extends Shape {
   double radius;
 
   @override
-  double get area => pi * pow(radius, 2);
+  double get area => double.parse((pi * pow(radius, 2)).toStringAsFixed(2));
 
   @override
   String get name => "Circle";
 
   @override
-  double get perimeter => 2 * pi * radius;
+  double get perimeter => double.parse((2 * pi * radius).toStringAsFixed(2));
 }
