@@ -21,7 +21,21 @@ class B {
   }
 }
 
-class C implements A, B {
+/*
+* To create Mixins, a class should adhere to certain requirements -
+* 1. Class must have no declared constructors.
+* 2. Class must not be inheriting from any other class except Object.
+* 3. No super calls should be made.
+* */
+mixin TimeStamp {
+  DateTime time = DateTime.now();
+
+  void printTime() {
+    print(time);
+  }
+}
+
+class C with TimeStamp implements A, B {
   // The requirement for implement keyword is that the class implementing the
   // interface must implement all the methods and fields of class it wants to interface.
 
@@ -69,4 +83,7 @@ void main() {
   // Casting A object to B and C
   (a as B).hello();
   (a as C).goodbye();
+
+  // Mixin Testing by printing TimeStamp
+  c.printTime();
 }
